@@ -1,0 +1,21 @@
+const Router = require('express')
+const router  = new Router()
+const userRouter = require('../routes/userRouter')
+const patientRouter = require('../routes/patientRouter')
+const specialistRouter = require('../routes/specialistRouter')
+const diagnosisRouter = require('../routes/diagnosisRouter')
+const visitRouter = require('../routes/visitRouter')
+const ticketRouter = require('../routes/ticketRouter')
+const feedbackRouter = require('../routes/feedbackRouter')
+const announcementRouter = require('../routes/announcementRouter')
+
+router.use('/user', userRouter)
+router.use('/patient', patientRouter)
+router.use('/specialist', specialistRouter)
+router.use('/diagnosis', diagnosisRouter)
+router.use('/visit', visitRouter)
+router.use('/ticket', ticketRouter)
+router.use('/feedback', feedbackRouter)
+router.use('/announcement', announcementRouter)
+
+module.exports = router
